@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SOVEREIGN CHARTER — Manifesto of Civilizational Continuity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garabond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #F4F1EA;
+            --bg-soft: #D9E3D4;
+            --bg-card: #FFFFFF;
+            --bg-warm: #F9F7F3;
+            --bg-dark: #1a1f1c;
+
+```
+        --text-dark: #1a1a1a;
+        --text-body: #2d2d2d;
+        --text-secondary: #4a4a4a;
+        --text-dim: #777770;
+        
+        --green-deep: #3d5a45;
+        --green-muted: #5a7d62;
+        --green-soft: #D9E3D4;
+        
+        --copper: #b86b2d;
+        --copper-light: #d4956d;
+        --copper-dim: #8a5420;
+        
+        --border: #d8d5cc;
+        --border-light: #e8e5dd;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+        font-family: 'Inter', -apple-system, sans-serif;
+        background: var(--bg-main);
+        color: var(--text-body);
+        line-height: 1.75;
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    /* Language toggle in corner - inside hero */
+    .lang-toggle {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 200;
+        display: flex;
+        gap: 0.2rem;
+        background: rgba(244, 241, 234, 0.98);
+        padding: 0.25rem;
+        border: 1px solid var(--border);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .lang-btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        border: none;
+        background: transparent;
+        color: var(--text-dim);
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .lang-btn.active {
+        background: var(--green-deep);
+        color: white;
+    }
+
+    /* Page states */
+    .lang-en, .lang-ru { display: none; }
+    body.show-en .lang-en { display: block; }
+    body.show-ru .lang-ru { display: block; }
+
+    /* HERO */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 6rem 2rem;
+        background: var(--bg-main);
+        position: relative;
+    }
+
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        opacity: 0.04;
+        background: 
+            radial-gradient(ellipse 50% 30% at 50% 70%, var(--green-soft) 0%, transparent 70%);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.6rem;
+        font-weight: 500;
+        letter-spacing: 0.4em;
+        color: var(--copper);
+        margin-bottom: 2rem;
+    }
+
+    .hero-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+        font-weight: 400;
+        color: var(--text-dark);
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        font-weight: 400;
+        color: var(--text-secondary);
+        letter-spacing: 0.05em;
+        margin-bottom: 3rem;
+    }
+
+    .hero-dates {
+        font-size: 0.8rem;
+        letter-spacing: 0.3em;
+        color: var(--copper-dim);
+        margin-bottom: 3rem;
+    }
+
+    .hero-manifesto {
+        font-size: 1.1rem;
+        color: var(--text-body);
+        max-width: 650px;
+        margin: 0 auto 2rem;
+        line-height: 1.85;
+    }
+
+    .hero-manifesto strong {
+        color: var(--text-dark);
+        font-weight: 500;
+    }
+
+    .hero-declaration {
+        font-size: 0.9rem;
+        color: var(--text-dim);
+        font-style: italic;
+        margin-bottom: 3rem;
+    }
+
+    .hero-cta {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: var(--copper);
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .hero-cta:hover { background: var(--copper-dim); }
+
+    /* SECTIONS */
+    section {
+        padding: 5rem 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .section-label {
+        font-size: 0.6rem;
+        font-weight: 500;
+        letter-spacing: 0.25em;
+        color: var(--copper);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .section-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-weight: 400;
+        color: var(--text-dark);
+        text-align: center;
+        line-height: 1.3;
+        margin-bottom: 2.5rem;
+    }
+
+    /* FRACTURE */
+    .fracture {
+        background: var(--bg-warm);
+        padding: 5rem 2rem;
+        max-width: none;
+        border-top: 1px solid var(--border-light);
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .fracture-content {
+        max-width: 750px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .fracture-intro {
+        font-size: 1.1rem;
+        color: var(--text-body);
+        margin-bottom: 2.5rem;
+        line-height: 1.8;
+    }
+
+    .fracture-list {
+        list-style: none;
+        text-align: left;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+
+    .fracture-list li {
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-light);
+        font-size: 1rem;
+        color: var(--text-body);
+    }
+
+    .fracture-list li:last-child { border-bottom: none; }
+
+    .fracture-list strong {
+        color: var(--text-dark);
+        font-weight: 500;
+    }
+
+    .fracture-conclusion {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        font-style: italic;
+        margin-top: 2rem;
+    }
+
+    /* BASTION */
+    .bastion {
+        background: var(--bg-soft);
+        padding: 5rem 2rem;
+        max-width: none;
+    }
+
+    .bastion-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .bastion-intro {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        font-size: 1.05rem;
+        color: var(--text-body);
+        line-height: 1.8;
+    }
+
+    .pillars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    @media (max-width: 700px) {
+        .pillars { grid-template-columns: 1fr; }
+    }
+
+    .pillar {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        padding: 1.8rem;
+    }
+
+    .pillar h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--green-deep);
+        margin-bottom: 0.6rem;
+    }
+
+    .pillar p {
+        font-size: 0.9rem;
+        color: var(--text-body);
+        line-height: 1.65;
+    }
+
+    .bastion-note {
+        text-align: center;
+        margin-top: 2.5rem;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        font-style: italic;
+    }
+
+    /* TIERS */
+    .tiers {
+        padding: 5rem 2rem;
+        max-width: none;
+        background: var(--bg-main);
+    }
+
+    .tiers-content {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .tiers-note {
+        text-align: center;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--text-dim);
+        margin-bottom: 2.5rem;
+    }
+
+    .tier-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+    }
+
+    @media (max-width: 800px) {
+        .tier-grid { grid-template-columns: 1fr; }
+    }
+
+    .tier-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+        transition: all 0.3s;
+    }
+
+    .tier-card:hover {
+        border-color: var(--copper-light);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .tier-card.featured {
+        border-color: var(--green-muted);
+        background: linear-gradient(180deg, var(--bg-card) 0%, rgba(217, 227, 212, 0.3) 100%);
+    }
+
+    .tier-badge {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--green-deep);
+        color: white;
+        font-size: 0.5rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .tier-amount {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.4rem;
+        color: var(--copper);
+        margin-bottom: 0.3rem;
+    }
+
+    .tier-name {
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        color: var(--text-dark);
+        margin-bottom: 1.2rem;
+    }
+
+    .tier-desc {
+        font-size: 0.85rem;
+        color: var(--text-body);
+        line-height: 1.6;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-light);
+        margin-bottom: 1rem;
+    }
+
+    .tier-includes {
+        list-style: none;
+        text-align: left;
+    }
+
+    .tier-includes li {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        padding: 0.4rem 0;
+        padding-left: 1.2rem;
+        position: relative;
+    }
+
+    .tier-includes li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--green-muted);
+    }
+
+    .tier-footer {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-light);
+        font-size: 0.75rem;
+        color: var(--text-dim);
+        font-style: italic;
+    }
+
+    /* PATHWAY */
+    .pathway {
+        background: var(--bg-warm);
+        padding: 5rem 2rem;
+        max-width: none;
+        border-top: 1px solid var(--border-light);
+    }
+
+    .pathway-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .pathway-steps {
+        margin-top: 2rem;
+    }
+
+    .pathway-step {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border: 2px solid var(--copper);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        color: var(--copper);
+        font-weight: 500;
+    }
+
+    .step-content h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.15rem;
+        color: var(--text-dark);
+        margin-bottom: 0.4rem;
+    }
+
+    .step-content p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.65;
+    }
+
+    /* FAQ */
+    .faq {
+        padding: 5rem 2rem;
+        max-width: 800px;
+    }
+
+    .faq-item {
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem 0;
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-q {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        color: var(--text-dark);
+        font-weight: 500;
+        margin-bottom: 0.6rem;
+    }
+
+    .faq-a {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 6rem 2rem;
+        text-align: center;
+        background: var(--bg-main);
+        border-top: 1px solid var(--border-light);
+    }
+
+    .cta-quote {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+        font-weight: 400;
+        color: var(--text-dark);
+        max-width: 700px;
+        margin: 0 auto 1rem;
+        line-height: 1.5;
+    }
+
+    .cta-source {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        font-style: italic;
+        margin-bottom: 2.5rem;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: var(--copper);
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .cta-button:hover { background: var(--copper-dim); }
+
+    .cta-email {
+        margin-top: 1.2rem;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+    }
+
+    .cta-email a {
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+
+    /* LEGAL */
+    .legal {
+        background: var(--bg-warm);
+        padding: 2.5rem 2rem;
+        border-top: 1px solid var(--border-light);
+    }
+
+    .legal-content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .legal p {
+        font-size: 0.7rem;
+        color: var(--text-dim);
+        line-height: 1.75;
+        margin-bottom: 0.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 2rem;
+        text-align: center;
+        background: var(--bg-main);
+    }
+
+    .footer-logo {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1rem;
+        color: var(--green-deep);
+        letter-spacing: 0.15em;
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-dates {
+        font-size: 0.7rem;
+        letter-spacing: 0.25em;
+        color: var(--copper-dim);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+        section, .fracture, .bastion, .tiers, .pathway, .faq, .cta, .legal {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .pathway-step { flex-direction: column; gap: 0.8rem; }
+    }
+</style>
+```
+
+</head>
+<body class="show-ru">
+
+```
+<!-- ==================== ENGLISH VERSION ==================== -->
+
+<div class="lang-en">
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    
+    <!-- Language toggle inside hero -->
+    <div class="lang-toggle">
+        <button class="lang-btn" onclick="switchLang('ru')">RU</button>
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+    </div>
+    
+    <div class="hero-content">
+        <div class="hero-eyebrow">THE MANIFESTO OF CIVILIZATIONAL CONTINUITY</div>
+        <h1 class="hero-title">THE SOVEREIGN CHARTER</h1>
+        <p class="hero-subtitle">A Private Act of Will for the Guardians of the Lineage</p>
+        <p class="hero-dates">2026 — 2126</p>
+        
+        <p class="hero-manifesto">
+            <strong>We unite the Guardians of the Lineage.</strong><br><br>
+            A global private initiative for those who recognize that the <strong>Sacred Union</strong>, the integrity of childhood, and the unbroken chain of generations are the supreme foundations of human existence. We stand with those who choose to anchor their legacy within the Russian Bastion—a territory transitioning from mere declaration to the practical creation of a new, land-based civilization.
+        </p>
+        
+        <p class="hero-declaration">
+            This is not a movement. This is not a campaign.<br>
+            <strong>This is a Sovereign Act of Will.</strong>
+        </p>
+        
+        <a href="#tiers" class="hero-cta">AFFIRM THE CHARTER</a>
+    </div>
+</section>
+
+<!-- THE GREAT FRACTURE -->
+<section class="fracture">
+    <div class="fracture-content">
+        <span class="section-label">THE HISTORICAL MOMENT</span>
+        <h2 class="section-title">The Great Fracture</h2>
+        
+        <p class="fracture-intro">
+            <strong>The West has entered a cycle of civilizational liquidation.</strong><br>
+            The sanctuary of the home has been breached by ideological conflict.
+        </p>
+        
+        <ul class="fracture-list">
+            <li><strong>The Sacred Union</strong> is being erased from the social fabric.</li>
+            <li><strong>The Innocence of the Cradle</strong> is sacrificed to social engineering.</li>
+            <li><strong>The Bridge of Memory</strong> between ancestors and descendants has been severed.</li>
+        </ul>
+        
+        <p class="fracture-conclusion">
+            Millions of sovereign individuals refuse to participate in this controlled decline. They seek a <strong>Sanctuary</strong> where the natural order is not a matter of debate, but the foundation of life.
+        </p>
+    </div>
+</section>
+
+<!-- THE RUSSIAN BASTION -->
+<section class="bastion">
+    <div class="bastion-content">
+        <span class="section-label">THE FOUNDATION</span>
+        <h2 class="section-title">The Russian Bastion: From Values to Earth</h2>
+        
+        <p class="bastion-intro">
+            <strong>The foremost global power where the Laws of Life remain sovereign.</strong><br><br>
+            Russia has moved beyond rhetoric. Following the strategic foundations of Decree №809, we are launching the <strong>Eco-Bio-Regions</strong>—a new civilization of estates and landscapes.
+        </p>
+        
+        <div class="pillars">
+            <div class="pillar">
+                <h3>The Covenant of Marriage</h3>
+                <p>The union of man and woman as the sole protected source of life.</p>
+            </div>
+            <div class="pillar">
+                <h3>The Sovereignty of the Home</h3>
+                <p>Absolute immunity for the family and the upbringing of children.</p>
+            </div>
+            <div class="pillar">
+                <h3>The Landscape Civilization</h3>
+                <p>Transition from urban exhaustion to sovereign estates, organic cooperation, and harmony with the Earth.</p>
+            </div>
+            <div class="pillar">
+                <h3>The Dialogue of Generations</h3>
+                <p>Youth Congress where the next generation carries the image of the future, free from digital and ideological pressure.</p>
+            </div>
+        </div>
+        
+        <p class="bastion-note">
+            We do not offer a utopia. We offer <strong>The Foundation</strong>.<br>
+            At this hour, Russia is the preeminent space where your lineage and your bond with the land are protected by the full weight of the law.
+        </p>
+    </div>
+</section>
+
+<!-- TIERS -->
+<section class="tiers" id="tiers">
+    <div class="tiers-content">
+        <span class="section-label">TIERS OF PARTICIPATION</span>
+        <h2 class="section-title">Three Levels of Civilizational Witness</h2>
+        <p class="tiers-note">Participation is an act of witness, not a transaction.</p>
+        
+        <div class="tier-grid">
+            <div class="tier-card">
+                <div class="tier-amount">$100</div>
+                <div class="tier-name">THE WITNESS</div>
+                <p class="tier-desc">A public fixation of your civilizational stance.</p>
+                <ul class="tier-includes">
+                    <li>Permanent entry in the Charter Registry</li>
+                    <li>Digital Certificate of Alignment</li>
+                    <li>Optional public listing</li>
+                </ul>
+                <p class="tier-footer">This is not membership. This is witness.</p>
+            </div>
+            
+            <div class="tier-card featured">
+                <div class="tier-badge">RECOMMENDED</div>
+                <div class="tier-amount">$500</div>
+                <div class="tier-name">THE GUARDIAN</div>
+                <p class="tier-desc">For those who seek to support the practical transition to the land.</p>
+                <ul class="tier-includes">
+                    <li>All Witness privileges</li>
+                    <li>Access to Eco-Bio-Region blueprints</li>
+                    <li>Analytical insights on global demography</li>
+                    <li>Invitation to regional gatherings</li>
+                </ul>
+                <p class="tier-footer">Gatherings are optional. Exit is free.</p>
+            </div>
+            
+            <div class="tier-card">
+                <div class="tier-amount">$3,000</div>
+                <div class="tier-name">THE FOUNDING ARCHITECT</div>
+                <p class="tier-desc">Absolute legacy. No obligations. Only the preservation of your flame.</p>
+                <ul class="tier-includes">
+                    <li>All Guardian privileges</li>
+                    <li>Invitation to Annual Continuity Summit</li>
+                    <li>Right to archive personal manifesto in the Annals of Continuity</li>
+                </ul>
+                <p class="tier-footer">Your legacy in history. No obligations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PATHWAY -->
+<section class="pathway">
+    <div class="pathway-content">
+        <span class="section-label">FROM VISION TO LAND</span>
+        <h2 class="section-title">The Practical Pathway</h2>
+        
+        <div class="pathway-steps">
+            <div class="pathway-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Affirm the Charter</h3>
+                    <p>Your symbolic alignment begins here. Choose your tier and receive immediate access to resources and the Registry.</p>
+                </div>
+            </div>
+            <div class="pathway-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Access the Blueprints</h3>
+                    <p>Guardians and Architects receive detailed methodologies for Eco-Bio-Regions: land allocation mechanisms, legal frameworks, and existing pilot projects.</p>
+                </div>
+            </div>
+            <div class="pathway-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Connect with the Network</h3>
+                    <p>Guidance for sovereign families: visa and residency pathways, partnerships with existing communities, and new developments aligned with state strategy.</p>
+                </div>
+            </div>
+            <div class="pathway-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Legacy Integration</h3>
+                    <p>Options for land acquisition, estate establishment, and intergenerational planning within the legal framework.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+    <span class="section-label">QUESTIONS</span>
+    <h2 class="section-title">Frequently Asked</h2>
+    
+    <div class="faq-item">
+        <p class="faq-q">Is this a political movement?</p>
+        <p class="faq-a">No. This is a private civilizational initiative. We do not engage in partisan politics. We unite around values, not parties.</p>
+    </div>
+    
+    <div class="faq-item">
+        <p class="faq-q">How does Russia legally protect these values?</p>
+        <p class="faq-a">Through Presidential Decree №809 (2022) on preserving traditional values, family sovereignty laws, Decree №400 on national security prioritizing "preservation of the people," and ongoing Eco-Bio-Region development programs.</p>
+    </div>
+    
+    <div class="faq-item">
+        <p class="faq-q">Can foreigners participate in Eco-Bio-Regions?</p>
+        <p class="faq-a">Yes. Multiple legal pathways exist, including investment, skilled migration, and humanitarian residency. Detailed guidance is provided to Guardians and above.</p>
+    </div>
+    
+    <div class="faq-item">
+        <p class="faq-q">Are there already functioning settlements?</p>
+        <p class="faq-a">Yes. Pilot Eco-Bio-Regions and family estate communities are active in multiple regions. Maps and contacts are available to registered participants.</p>
+    </div>
+    
+    <div class="faq-item">
+        <p class="faq-q">Is this an investment?</p>
+        <p class="faq-a">No. Participation grants no financial return, ownership, or claims. This is an act of civilizational witness, not a transaction.</p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <p class="cta-quote">
+        "Civilizations do not perish by war—they wither by the abandonment of the cradle."
+    </p>
+    <p class="cta-source">— The Sovereign Charter</p>
+    
+    <a href="mailto:join@declaration.earth" class="cta-button">JOIN THE BASTION</a>
+    <p class="cta-email"><a href="mailto:join@declaration.earth">join@declaration.earth</a></p>
+</section>
+
+<!-- LEGAL -->
+<section class="legal">
+    <div class="legal-content">
+        <p>This is a private initiative. Not a state program. The Russian Federation provides no guarantees, funding, or endorsement. Alignment with state policy does not imply partnership.</p>
+        <p>This is not a security or investment contract. Participation grants no rights to land, citizenship, protection, or privileges. Contribution is an act of witness, not a purchase.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">THE SOVEREIGN CHARTER</div>
+    <div class="footer-dates">2026 — 2126</div>
+</footer>
+
+</div>
+
+<!-- ==================== RUSSIAN VERSION ==================== -->
+
+<div class="lang-ru">
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    
+    <!-- Language toggle inside hero -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="switchLang('ru')">RU</button>
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+    </div>
+    
+    <div class="hero-content">
+        <div class="hero-eyebrow">МАНИФЕСТ ЦИВИЛИЗАЦИОННОЙ ПРЕЕМСТВЕННОСТИ</div>
+        <h1 class="hero-title">СУВЕРЕННАЯ ХАРТИЯ</h1>
+        <p class="hero-subtitle">Частный Акт Воли для Хранителей Рода</p>
+        <p class="hero-dates">2026 — 2126</p>
+        
+        <p class="hero-manifesto">
+            <strong>Мы объединяем Хранителей Рода.</strong><br><br>
+            Глобальная частная инициатива для тех, кто признает <strong>Священный Союз</strong>, неприкосновенность детства и неразрывную цепь поколений высшими основами человеческого бытия. Мы поддерживаем тех, кто выбирает Россию как твердыню для сохранения своего наследия — пространство, где идеи переходят в реальность новой «ландшафтно-усадебной» цивилизации.
+        </p>
+        
+        <p class="hero-declaration">
+            Это не движение. Это не программа.<br>
+            <strong>Это — Суверенный Акт Воли.</strong>
+        </p>
+        
+        <a href="#tiers-ru" class="hero-cta">ПОДПИСАТЬ ХАРТИЮ</a>
+    </div>
+</section>
+
+<!-- ВЕЛИКИЙ РАЗЛОМ -->
+<section class="fracture">
+    <div class="fracture-content">
+        <span class="section-label">ИСТОРИЧЕСКИЙ МОМЕНТ</span>
+        <h2 class="section-title">Великий Разлом</h2>
+        
+        <p class="fracture-intro">
+            <strong>Запад вступил в цикл цивилизационной ликвидации.</strong><br>
+            Святилище дома разрушено идеологическим конфликтом.
+        </p>
+        
+        <ul class="fracture-list">
+            <li><strong>Священный Союз</strong> мужчины и женщины стирается из основ общества.</li>
+            <li><strong>Чистота Колыбели</strong> приносится в жертву социальному инжинирингу.</li>
+            <li><strong>Мост Памяти</strong> между предками и потомками намеренно разрушен.</li>
+        </ul>
+        
+        <p class="fracture-conclusion">
+            Миллионы суверенных личностей не желают участвовать в этом управляемом упадке. Они ищут <strong>Пристанище</strong>, где естественный порядок вещей является не «мнением», а фундаментом жизни.
+        </p>
+    </div>
+</section>
+
+<!-- РОССИЙСКАЯ ТВЕРДЫНЯ -->
+<section class="bastion">
+    <div class="bastion-content">
+        <span class="section-label">ФУНДАМЕНТ</span>
+        <h2 class="section-title">Российская Твердыня: От Смыслов к Земле</h2>
+        
+        <p class="bastion-intro">
+            <strong>Единственная мировая держава, где Законы Жизни суверенны.</strong><br><br>
+            Россия перешла от деклараций к практике. В рамках реализации стратегии Указа №809 мы запускаем проект <strong>«Эко-Био-Регионы»</strong> — цивилизацию нового качества жизни на земле.
+        </p>
+        
+        <div class="pillars">
+            <div class="pillar">
+                <h3>Завет Брака</h3>
+                <p>Союз мужчины и женщины как единственный защищенный источник жизни.</p>
+            </div>
+            <div class="pillar">
+                <h3>Суверенитет Дома</h3>
+                <p>Абсолютный иммунитет семьи и воспитания от внешнего диктата.</p>
+            </div>
+            <div class="pillar">
+                <h3>Ландшафтная Цивилизация</h3>
+                <p>Переход от городского истощения к жизни в родовых усадьбах, органическому созиданию и гармонии с Землей.</p>
+            </div>
+            <div class="pillar">
+                <h3>Диалог Поколений</h3>
+                <p>Юношеский конгресс, где дети — прямые носители образа будущего — строят его наравне со взрослыми.</p>
+            </div>
+        </div>
+        
+        <p class="bastion-note">
+            Мы не обещаем утопию. Мы предлагаем <strong>Фундамент</strong>.<br>
+            В этот час истории Россия — это пространство, где преемственность вашего Рода и ваша связь с землей защищены всей мощью закона.
+        </p>
+    </div>
+</section>
+
+<!-- УРОВНИ -->
+<section class="tiers" id="tiers-ru">
+    <div class="tiers-content">
+        <span class="section-label">УРОВНИ УЧАСТИЯ</span>
+        <h2 class="section-title">Три уровня цивилизационного свидетельства</h2>
+        <p class="tiers-note">Участие — это акт свидетельства, а не покупка.</p>
+        
+        <div class="tier-grid">
+            <div class="tier-card">
+                <div class="tier-amount">$100</div>
+                <div class="tier-name">СВИДЕТЕЛЬ</div>
+                <p class="tier-desc">Публичная фиксация вашей цивилизационной позиции.</p>
+                <ul class="tier-includes">
+                    <li>Бессрочная запись в Реестре Хартии</li>
+                    <li>Цифровое Свидетельство Сопричастности</li>
+                    <li>Опциональное публичное упоминание</li>
+                </ul>
+                <p class="tier-footer">Это не членство. Это свидетельство.</p>
+            </div>
+            
+            <div class="tier-card featured">
+                <div class="tier-badge">РЕКОМЕНДУЕМ</div>
+                <div class="tier-amount">$500</div>
+                <div class="tier-name">ХРАНИТЕЛЬ</div>
+                <p class="tier-desc">Для тех, кто поддерживает практический переход к жизни на земле.</p>
+                <ul class="tier-includes">
+                    <li>Все возможности уровня «Свидетель»</li>
+                    <li>Доступ к методологиям «Эко-Био-Регионов»</li>
+                    <li>Закрытая аналитика по глобальной демографии</li>
+                    <li>Приглашение на региональные встречи</li>
+                </ul>
+                <p class="tier-footer">Встречи необязательны. Выход свободный.</p>
+            </div>
+            
+            <div class="tier-card">
+                <div class="tier-amount">$3,000</div>
+                <div class="tier-name">ОСНОВАТЕЛЬ-АРХИТЕКТОР</div>
+                <p class="tier-desc">Ваше наследие в истории. Никаких обязательств. Только сохранение огня.</p>
+                <ul class="tier-includes">
+                    <li>Все возможности уровня «Хранитель»</li>
+                    <li>Приглашение на ежегодную Ассамблею Преемственности</li>
+                    <li>Право на внесение личного текста в Архив Преемственности</li>
+                </ul>
+                <p class="tier-footer">Ваше наследие. Никаких обязательств.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ПУТЬ -->
+<section class="pathway">
+    <div class="pathway-content">
+        <span class="section-label">ОТ ИДЕИ К ЗЕМЛЕ</span>
+        <h2 class="section-title">Практический Путь</h2>
+        
+        <div class="pathway-steps">
+            <div class="pathway-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Подпишите Хартию</h3>
+                    <p>Ваше символическое присоединение начинается здесь. Выберите уровень и получите доступ к ресурсам и Реестру.</p>
+                </div>
+            </div>
+            <div class="pathway-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Получите доступ к методологиям</h3>
+                    <p>Хранители и Архитекторы получают детальные материалы по Эко-Био-Регионам: механизмы распределения земли, правовые рамки, пилотные проекты.</p>
+                </div>
+            </div>
+            <div class="pathway-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Присоединитесь к сети</h3>
+                    <p>Сопровождение для суверенных семей: визовые пути, партнерства с действующими сообществами, новые проекты в рамках государственной стратегии.</p>
+                </div>
+            </div>
+            <div class="pathway-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Интеграция наследия</h3>
+                    <p>Возможности приобретения земли, создания усадьбы и межпоколенческого планирования в рамках закона.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+    <span class="section-label">ВОПРОСЫ</span>
+    <h2 class="section-title">Часто задаваемые</h2>
+    
+    <div class="faq-item">
+        <p class="faq-q">Это политическое движение?</p>
+        <p class="faq-a">Нет. Это частная цивилизационная инициатива. Мы не участвуем в партийной политике. Мы объединяемся вокруг ценностей, а не партий.</p>
+    </div>
+    
+    <div class="faq-item">
+        <p class="faq-q">Как Россия юридически защищает эти ценности?</p>
+        <p class="faq-a">Через Указ Президента №809 (2022) о сохранении традиционных ценностей, законы о суверенитете семьи, Указ №400 о национальной безопасности с приоритетом «сбережения народа», и программы развития Эко-Био-Регионов.</p>
+    </div>
+    
+    <div class="faq-item">
+        <p class="faq-q">Могут ли иностранцы участвовать в Эко-Био-Регионах?</p>
+        <p class="faq-a">Да. Существуют различные правовые пути: инвестиции, квалифицированная миграция, гуманитарное резидентство. Подробное сопровождение предоставляется Хранителям и выше.</p>
+    </div>
+    
+    <div class="faq-item">
+        <p class="faq-q">Существуют ли уже действующие поселения?</p>
+        <p class="faq-a">Да. Пилотные Эко-Био-Регионы и родовые поселения активны в нескольких регионах. Карты и контакты доступны зарегистрированным участникам.</p>
+    </div>
+    
+    <div class="faq-item">
+        <p class="faq-q">Это инвестиция?</p>
+        <p class="faq-a">Нет. Участие не дает финансовой отдачи, собственности или прав требования. Это акт цивилизационного свидетельства, а не сделка.</p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <p class="cta-quote">
+        «Цивилизации гибнут не от войн. Они исчезают тогда, когда люди отрекаются от своих корней.»
+    </p>
+    <p class="cta-source">— Суверенная Хартия</p>
+    
+    <a href="mailto:join@declaration.earth" class="cta-button">ВСТУПИТЬ В ОПЛОТ</a>
+    <p class="cta-email"><a href="mailto:join@declaration.earth">join@declaration.earth</a></p>
+</section>
+
+<!-- LEGAL -->
+<section class="legal">
+    <div class="legal-content">
+        <p>Это частная инициатива. Не государственная программа. Российская Федерация не предоставляет гарантий, финансирования или одобрения. Соответствие государственной политике не означает партнерства.</p>
+        <p>Это не ценная бумага и не инвестиционный контракт. Участие не дает прав на землю, гражданство, защиту или привилегии. Взнос — это акт свидетельства, а не покупка.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">СУВЕРЕННАЯ ХАРТИЯ</div>
+    <div class="footer-dates">2026 — 2126</div>
+</footer>
+
+</div>
+
+<script>
+    function switchLang(lang) {
+        document.body.classList.remove('show-en', 'show-ru');
+        document.body.classList.add('show-' + lang);
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.textContent === lang.toUpperCase()) {
+                btn.classList.add('active');
+            }
+        });
+        window.scrollTo(0, 0);
+    }
+</script>
+```
+
+</body>
+</html>
